@@ -1,0 +1,27 @@
+//Altere o conteúdo da tag h2 com document.querySelector e atribua o seguinte texto: Hora do Desafio:
+let titulo = document.querySelector('h2');
+titulo.innerHTML = 'Hora do Desafio';
+
+//Crie uma função que exiba no console a mensagem O botão foi clicado sempre que o botão Console for pressionado:
+function verificarBotao(){
+    console.log('O botão foi clicado!');
+}
+
+//Crie uma função que exiba um alerta com a mensagem: Eu amo Js, sempre que o botão Alerta for pressionado:
+function precionarBotao(){
+    alert('Eu amo o Chico');
+}
+
+//Crie uma função que é executada quando o botão prompt é clicado, perguntando o nome de uma cidade do Brasil. Em seguida, exiba um alerta com a mensagem concatenando a resposta com o texto: Estive em {cidade} e lembrei de você:
+function precionarPrompt(){
+    let cidade = prompt('Escreva o nome de uma cidade do Brasil:')
+    alert('Estive em '+ cidade + ' e lembrei de você.');
+}
+
+//Ao clicar no botão soma, peça 2 números e exiba o resultado da soma em um alerta.
+function precionarSoma() {
+    let numerosInteiros = parseInt (prompt('Digite o primeiro número:'))
+    let numerosInteiros1 = parseInt (prompt('Digite o segundo número:'))
+    let soma = numerosInteiros + numerosInteiros1;
+    alert('Resultado da soma de ' + numerosInteiros + ' + ' + numerosInteiros1 + ' é igual a '+ soma);
+}
