@@ -2,7 +2,7 @@
 function exibirMensagem(){
     console.log('Olá, mundo!');
 }
-mensagem();
+exibirmensagem();
 
 //Criar uma função que recebe um nome como parâmetro e exibe "Olá, [nome]!" no console.
 function exibirNome(nome){
