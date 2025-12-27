@@ -1,0 +1,39 @@
+//Criar uma função que exibe "Olá, mundo!" no console.
+function exibirMensagem(){
+    console.log('Olá, mundo!');
+}
+mensagem();
+
+//Criar uma função que recebe um nome como parâmetro e exibe "Olá, [nome]!" no console.
+function exibirNome(nome){
+    console.log('Olá, ' + nome + '!');
+}
+exibirNome('mundo');
+
+//Criar uma função que recebe um número como parâmetro e retorna o dobro desse número.
+function dobroDoNumero(numero){
+    return numero * 2;
+}
+let resultadoDobroDoNumero = dobroDoNumero(5);
+console.log(resultadoDobroDoNumero);
+
+//Criar uma função que recebe três números como parâmetros e retorna a média deles.
+function mediaDosNumeros(a, b, c){
+    return (a + b + c) /3;
+}
+let mediaFinal = mediaDosNumeros(10, 20, 30);
+console.log(mediaFinal);
+
+//Criar uma função que recebe dois números como parâmetros e retorna o maior deles.
+function retornaNumero(d, e){
+    return d > e ? d : e;
+}
+let retornaMaior = retornaNumero(40, 39);
+console.log(retornaMaior);
+
+//Criar uma função que recebe um número como parâmetro e retorna o resultado da multiplicação desse número por ele mesmo
+function multiplicarNumero(numero){
+    return numero * numero;
+}
+let multiplicarNumeroPorEle = multiplicarNumero(5);
+console.log(multiplicarNumeroPorEle);
