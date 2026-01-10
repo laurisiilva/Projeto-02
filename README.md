@@ -1,68 +1,11 @@
-//let titulo = document.querySelector('h1');
-//titulo.innerHTML = 'Jogo do número secreto';
+<h1>Jogo do número secreto</h1>
 
-//let paragrafo = document.querySelector('p');
-//paragrafo.innerHTML = 'Escolha um número entre 1 e 10';
+<h2>Sobre</h2>
+<p>Projeto utilizado nos cursos de lógica de programação da Alura.</p>
 
-let listaDeNumerosSorteados = [];
-let numeroLimite = 10;
-let numeroSecreto = gerarNumeroAleatorio();
-let tentativas = 1;
-
-function exibirTextoNaTela(tag, texto){
-    let campo = document.querySelector(tag);
-    campo.innerHTML = texto;
-}
-
-function exebirMensagemInicial(){
-    exibirTextoNaTela('h1', 'Jogo do número secreto');
-    exibirTextoNaTela('p', 'Escolha um número entre 1 e 10');
-}
-
-exebirMensagemInicial();
-
-function verificarChute(){
-    let chute = document.querySelector('input').value;
-    if(chute == numeroSecreto){
-        exibirTextoNaTela('h1', 'Acertou');
-        let mensagemTentativa = tentativas > 1 ? 'tentativas' : 'tentativa';
-        let mensagemTentativas = 'Você descobriu o número secreto com ' + tentativas +' '+ mensagemTentativa + '!';
-        exibirTextoNaTela('p', mensagemTentativas);
-        document.getElementById('reiniciar').removeAttribute('disabled');
-    } else{
-        if(chute > numeroSecreto){
-            exibirTextoNaTela('p', 'O número secreto é menor que '+ chute);
-        } else{
-            exibirTextoNaTela('p', 'O número secreto é maior que '+ chute);
-        }
-        tentativas++;
-        limparCampo();
-    }
-}
-
-function gerarNumeroAleatorio(){
-    let numeroEscolhido = parseInt(Math.random() * + numeroLimite + 1);
-    let quantidadeDeElementosNaLista = listaDeNumerosSorteados.length;
-    if(quantidadeDeElementosNaLista == + numeroLimite){
-        listaDeNumerosSorteados = [];
-    }
-    if (listaDeNumerosSorteados.includes(numeroEscolhido)){
-        return gerarNumeroAleatorio();
-    } else{
-        listaDeNumerosSorteados.push(numeroEscolhido);
-        return numeroEscolhido;
-    }
-}
-
-function limparCampo(){
-    chute = document.querySelector('input');
-    chute.value = '';
-}
-
-function reiniciarJogo(){
-    numeroSecreto = gerarNumeroAleatorio();
-    limparCampo();
-    tentativas = 1;
-    exebirMensagemInicial();
-    document.getElementById('reiniciar').setAttribute('disabled', true)
-}
+## Tecnologias
+<div>
+  <img src="https://img.shields.io/badge/HTML-239120?style=for-the-badge&logo=html5&logoColor=white">
+  <img src="https://img.shields.io/badge/CSS-239120?&style=for-the-badge&logo=css3&logoColor=white">
+  <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black">
+</div>
